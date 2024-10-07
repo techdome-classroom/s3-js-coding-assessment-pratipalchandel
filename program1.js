@@ -9,8 +9,8 @@ var isValid = function(s) {
         '}': '{',
         ']': '['
     };
-    for (let i = 0; i < s.length; i++) {
-        const char = s[i];
+    for (let i=0;i<s.length;i++) {
+        const char=s[i];
         if (bracket[char]) {
             const topElement=stack.length ? stack.pop() : '#';
             if (bracket[char] !== topElement) {
