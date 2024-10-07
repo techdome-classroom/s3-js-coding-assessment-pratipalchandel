@@ -3,8 +3,8 @@
  * @return {boolean}
  */
 var isValid = function(s) {
-    const stack = [];
-    const bracket = {
+    const stack=[];
+    const bracket={
         ')': '(',
         '}': '{',
         ']': '['
@@ -12,7 +12,7 @@ var isValid = function(s) {
     for (let i = 0; i < s.length; i++) {
         const char = s[i];
         if (bracket[char]) {
-            const topElement = stack.length ? stack.pop() : '#';
+            const topElement=stack.length ? stack.pop() : '#';
             if (bracket[char] !== topElement) {
                 return false;
             }
@@ -20,9 +20,8 @@ var isValid = function(s) {
             stack.push(char);
         }
     }
-    return stack.length === 0;
+    return stack.length===0;
 };
-
 module.exports = { isValid };
 
 
